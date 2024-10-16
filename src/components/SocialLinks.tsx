@@ -7,13 +7,14 @@ export default function SocialLinks({ page }: {page?: string}) {
 
   const { currentSection } = useSection();
 
+  console.log(currentSection)
+
 
   return (
     <>
       {page === "index" ? (
         <div className="hidden fixed left-10 bottom-1/3 md:flex flex-col w-6 h-52 items-center justify-between">
           {navLinks.map((nav) => {
-            console.log(nav.text);
             return (
               <a
                 title={nav.text}
@@ -63,7 +64,7 @@ export default function SocialLinks({ page }: {page?: string}) {
 const socialLinks = [
   {
     id: 1,
-    title: "Sat Naing's Github Profile",
+    title: "Brian Munene's Github Profile",
     link: "https://github.com/mikwaDev",
     svg: (
       <svg
@@ -82,7 +83,7 @@ const socialLinks = [
   },
   {
     id: 2,
-    title: "Sat Naing's LinkedIn Profile",
+    title: "Brian Munene's LinkedIn Profile",
     link: "https://www.linkedin.com/in/brianmikwa/",
     svg: (
       <svg
@@ -101,11 +102,11 @@ const socialLinks = [
 
 const navLinks = [
   {
-    url: "#",
-    text: "Welcome",
+    url: "#welcome",
+    text: "",
   },
   {
-    url: "#whoami",
+    url: "#who am i?",
     text: "Who am i?",
   },
   {

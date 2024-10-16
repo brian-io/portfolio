@@ -2,21 +2,25 @@
 
 import LinkButton from "@/components/LinkButton";
 import { useRef, useEffect } from "react";
+import useScrollActive from "@/hooks/useScrollActive";
+import { useSection } from "@/context/section";
+
 import brianMikwa from "../../public/brianMikwa-illustration1.png";
 import Image from "next/image";
-// import laptop from "../../public/laptop-illustration.webp";
+
 import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Link from "next/link";
 
 
 export default function Hero() {
-  const sectionRef = useRef(null);
-  const q = gsap.utils.selector(sectionRef);
+  const sectionRef = useRef<HTMLDivElement>(null);
+  gsap.registerPlugin(ScrollTrigger);
+  gsap.registerPlugin(useGSAP);
 
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-
+  useGSAP(
+    () => {
     // bg text parallax effect
     gsap.to(".bg-text", {
       scrollTrigger: {
@@ -32,38 +36,39 @@ export default function Hero() {
 
     // illustration floating effect
     let imgTl = gsap.timeline({ repeat: -1 });
+    imgTl.set(".image-animation", { x: 0, y: 0 });
     imgTl
-      // .to(".image-animation",{
-      //   duration: 3,
-      //   y: "-=20",
-      //   x: "+=20",
-      //   rotation: "-=2",
-      //   ease: "power3.inOut",
-      // })
-      // .to(".image-animation", {
-      //   duration: 3,
-      //   y: "+=20",
-      //   x: "-=20",
-      //   rotation: "+=2",
-      //   ease: "power3.inOut",
-      // })
       .to(".image-animation", {
         duration: 3,
         y: "-=20",
-        ease: "power3.inOut",
+        ease: "power3.easeinOut",
       })
       .to(".image-animation", { 
-        duration:3, 
+        duration: 3, 
         y: "+=20",
-        ease: "power3.inOut",
+        ease: "power3.easeinOut",
       });
     
      
-  }, [q]);
+    }, 
+    { scope: sectionRef}
+  );
+
+  // Set active link for contact section
+  const heroSection = useScrollActive(sectionRef, "welcome");
+  const { currentSection, onSectionChange } = useSection();
+  console.log(currentSection)
+
+  useEffect(() => {
+     heroSection && onSectionChange!("welcome");
+     console.log(heroSection)
+
+  }, [onSectionChange]);
 
     return (
-      <section
+    <section
       ref={sectionRef}
+      id="welcome"
       className="relative mt-16 sm:mt-8 pt-8 lg:pt-0 px-4 sm:px-8 md:px-20 max-w-5xl sm:pb-24 min-h-[769px] mx-auto sm:flex sm:flex-col sm:justify-center sm:items-center lg:flex-row-reverse"
     >
       <span

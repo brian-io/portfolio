@@ -113,7 +113,7 @@ export default function Header(){
                             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
                             title="Toggles light & dark theme"
                             ref={themeBtnRef}
-                            // aria-label={theme === "dark" ? "dark" : "light"}
+                            aria-label={theme === "dark" ? "dark" : "light"}
                             aria-live="polite"
                             className="w-8 h-8 ml-1 rounded-lg flex justify-center items-center link-outline"
                         >

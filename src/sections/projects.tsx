@@ -24,7 +24,7 @@ export default function Projects () {
   const isOnScreen = useOnScreen(elementRef);
 
   // Set active link for project section
-  const projectSection = useScrollActive(sectionRef);
+  const projectSection = useScrollActive(sectionRef, "projects");
   const { onSectionChange } = useSection();
   useEffect(() => {
     projectSection && onSectionChange!("projects");
@@ -81,7 +81,7 @@ const projects = [
     desc: "A minimal, accessible and SEO-friendly app. Uses the new Next.js App Router. This includes support for enhanced layouts, colocation of components, tests, and styles, component-level data fetching, and more.",
     tags: ["NextJs", "TypeScript", "App Router", "TailwindCSS"],
     liveUrl: "https://nextjs-dashboard-bmm.vercel.dev/",
-    codeUrl: "https://github.com/mikwaDev/nexjs-dashboard",
+    codeUrl: "https://github.com/mikwaDev/nextjs-dashboard",
     bgColor: "bg-[#9FD0E3]",
     githubApi: "https://api.github.com/repos/mikwaDev/nextjs-dashboard",
   },

@@ -13,15 +13,12 @@ export default function Contact() {
     const { theme } = useTheme();
 
   const sectionRef = useRef<HTMLDivElement>(null);
-  const isSecOnScreen = useOnScreen(sectionRef);
-
-  
 
   const elementRef = useRef<HTMLDivElement>(null);
   const isOnScreen = useOnScreen(elementRef);
 
   // Set active link for contact section
-  const contactSection = useScrollActive(sectionRef);
+  const contactSection = useScrollActive(sectionRef, "contact");
   const { onSectionChange } = useSection();
   useEffect(() => {
     contactSection && onSectionChange!("contact");

@@ -8,7 +8,7 @@ import { ProvideSection } from "../context/section";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "BrianMikwaDev",
+  title: "Mikwa Dev",
   description: "Brian's lore so far",
 };
 
