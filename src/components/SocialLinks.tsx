@@ -7,9 +7,6 @@ export default function SocialLinks({ page }: {page?: string}) {
 
   const { currentSection } = useSection();
 
-  console.log(currentSection)
-
-
   return (
     <>
       {page === "index" ? (
@@ -43,7 +40,7 @@ export default function SocialLinks({ page }: {page?: string}) {
         </div>
       )}
       <div className="hidden fixed right-10 bottom-0 md:flex flex-col w-6 h-[17rem] items-center justify-between">
-        <div className="flex flex-col space-y-6">
+        <div className="flex flex-col space-y-4">
           {socialLinks.map((social) => (
             <a
               key={social.id}
@@ -55,7 +52,7 @@ export default function SocialLinks({ page }: {page?: string}) {
             </a>
           ))}
         </div>
-        <div className="w-80 h-1 bg-bgdark dark:bg-bglight rotate-90"></div>
+        <div className="w-96 h-1 bg-bgdark dark:bg-bglight rotate-90"></div>
       </div>
     </>
   );
@@ -64,7 +61,7 @@ export default function SocialLinks({ page }: {page?: string}) {
 const socialLinks = [
   {
     id: 1,
-    title: "Brian Munene's Github Profile",
+    title: "Brian's Github Profile",
     link: "https://github.com/mikwaDev",
     svg: (
       <svg
@@ -83,7 +80,7 @@ const socialLinks = [
   },
   {
     id: 2,
-    title: "Brian Munene's LinkedIn Profile",
+    title: "Brian's LinkedIn Profile",
     link: "https://www.linkedin.com/in/brianmikwa/",
     svg: (
       <svg

@@ -56,14 +56,12 @@ export default function Hero() {
 
   // Set active link for contact section
   const heroSection = useScrollActive(sectionRef, "welcome");
-  const { currentSection, onSectionChange } = useSection();
-  console.log(currentSection)
+  const { onSectionChange } = useSection();
 
   useEffect(() => {
      heroSection && onSectionChange!("welcome");
-     console.log(heroSection)
 
-  }, [onSectionChange]);
+  }, [heroSection, onSectionChange]);
 
     return (
     <section
