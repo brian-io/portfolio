@@ -24,7 +24,7 @@ export default function Projects () {
   const isOnScreen = useOnScreen(elementRef);
 
   // Set active link for project section
-  const projectSection = useScrollActive(sectionRef, "projects");
+  const projectSection = useScrollActive(sectionRef);
   const { onSectionChange } = useSection();
   useEffect(() => {
     projectSection && onSectionChange!("projects");

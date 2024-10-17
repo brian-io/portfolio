@@ -55,7 +55,7 @@ export default function Hero() {
   );
 
   // Set active link for contact section
-  const heroSection = useScrollActive(sectionRef, "welcome");
+  const heroSection = useScrollActive(sectionRef);
   const { onSectionChange } = useSection();
 
   useEffect(() => {
@@ -67,7 +67,7 @@ export default function Hero() {
     <section
       ref={sectionRef}
       id="welcome"
-      className="relative mt-16 sm:mt-8 pt-8 lg:pt-0 px-4 sm:px-8 md:px-20 max-w-5xl sm:pb-24 min-h-[769px] mx-auto sm:flex sm:flex-col sm:justify-center sm:items-center lg:flex-row-reverse"
+      className="relative mt-16 sm:mt-8 pt-8 lg:pt-0 px-4 sm:px-8 md:px-20 max-w-5xl sm:pb-24 min-h-[800px] mx-auto sm:flex sm:flex-col sm:justify-center sm:items-center lg:flex-row-reverse"
     >
       <span
         aria-hidden="true"

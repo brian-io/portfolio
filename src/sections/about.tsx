@@ -97,7 +97,7 @@ export default function About() {
   const eduRef = useRef<HTMLDivElement>(null);
 
   // Set active link for about section
-  const aboutSection = useScrollActive(sectionRef, "who am i?");
+  const aboutSection = useScrollActive(sectionRef);
   const { onSectionChange } = useSection();
   useEffect(() => {
     aboutSection ? onSectionChange!("who am i?") : onSectionChange!("");

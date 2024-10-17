@@ -18,7 +18,7 @@ export default function Contact() {
   const isOnScreen = useOnScreen(elementRef);
 
   // Set active link for contact section
-  const contactSection = useScrollActive(sectionRef, "contact");
+  const contactSection = useScrollActive(sectionRef);
   const { onSectionChange } = useSection();
   useEffect(() => {
     contactSection && onSectionChange!("contact");
@@ -28,8 +28,8 @@ export default function Contact() {
     <section
       ref={sectionRef}
       id="contact"
-      className="section min-h-[700px] text-center"
-    >
+      className="section min-h-[800px] text-center lg:min-h-[500px]"
+    > 
       <div className="text-center">
         <RoughNotation
           type="underline"

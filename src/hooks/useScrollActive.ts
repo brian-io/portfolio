@@ -1,52 +1,35 @@
 import { useSection } from "@/context/section";
-import { useState, useEffect, RefObject, useCallback } from "react";
+import { useState, useEffect, RefObject } from "react";
 
-export default function useScrollActive(ref: RefObject<HTMLElement>, sectionId: string){
+export default function useScrollActive(ref: RefObject<HTMLElement>){
     const [state, setState] = useState(false);
-    const { currentSection, onSectionChange } = useSection();
+    const { onSectionChange } = useSection();
 
-    const checkScroll = useCallback(() => {
-        if (!ref.current) return;
+    useEffect(() =>{
+        const scrollActive = () => {
+            const scrollY = window.scrollY;
 
-        const scrollY = window.scrollY;
-        const sectionHeight = ref.current.offsetHeight;
-        const sectionTop = ref.current.offsetTop - 80;
-        
-        if (
-            scrollY >= sectionTop &&
-            scrollY < sectionTop + sectionHeight
-        ) {
-            setState(true);
-            onSectionChange!(sectionId);
-        } else {
-            setState(false);
-        }
-    }, [ref, sectionId, onSectionChange]);
-    
-    
-    useEffect(() => {
-        if (ref.current && ref.current.offsetTop <= 80 && currentSection === "") {
-            onSectionChange!(sectionId);
-            setState(true);
-        }
-    }, [ref, sectionId, onSectionChange, currentSection]);
+            const sectionHeight = ref.current?.offsetHeight;
+            const sectionTop = ref?.current?.offsetTop! - 80;
 
+            if(
+                scrollY > sectionTop &&
+                scrollY <= sectionTop + (sectionHeight as number)
+            ){
+                setState(true);
+            } else {
+                setState(false);
+            }
 
+        };
 
-    useEffect(() => {
-        // Check scroll position immediately on mount and when the component updates
-        checkScroll();
+        scrollActive();
+        window.addEventListener("scroll", scrollActive);
 
-        // Set up scroll event listener
-        window.addEventListener("scroll", checkScroll);
-
-        // Clean up
         return () => {
-            window.removeEventListener("scroll", checkScroll);
+            window.removeEventListener("scroll", scrollActive);
         }
-    }, [checkScroll]);
+    }, [onSectionChange]);
 
-    
-    
     return state;
 }
