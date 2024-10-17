@@ -45,7 +45,7 @@ export default function Projects () {
       </div>
       <span className="project-desc text-center block mb-4" ref={elementRef}>
         “Talk is cheap. Show me the code”? I got you. <br />
-        Here are some of my projects you shouldn't misss
+        Here are some of my projects you shouldn&apos;t misss
       </span>
       <div className="flex flex-wrap">
         {projects.map((project, index) => (
