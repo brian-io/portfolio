@@ -136,7 +136,7 @@ export default function Header(){
                             </svg>
                         </button>
                     </nav>
-                    </div>
+                </div>
             </div>
         </header>
     );

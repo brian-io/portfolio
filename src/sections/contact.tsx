@@ -28,7 +28,7 @@ export default function Contact() {
     <section
       ref={sectionRef}
       id="contact"
-      className="section min-h-[800px] text-center lg:min-h-[500px]"
+      className="section min-h-[800px] text-center lg:min-h-[700px]"
     > 
       <div className="text-center">
         <RoughNotation

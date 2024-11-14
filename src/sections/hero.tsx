@@ -85,8 +85,8 @@ export default function Hero() {
               height={1374}
               priority
               id="character-illustration"
-              aria-label="Sat Naing character illustration levitating with a Macbook"
-              alt="Sat Naing character illustration"
+              aria-label="Brian Munene character illustration levitating with a Macbook"
+              alt="Brian Munene character illustration"
             />
           </div>
           
