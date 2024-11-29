@@ -9,6 +9,7 @@ import ProjectCard from "@/components/ProjectCard";
 import { useSection } from "@/context/section";
 import useOnScreen from "@/hooks/useOnScreen";
 import useScrollActive from "@/hooks/useScrollActive";
+import AboutBgSvg from "@/components/AboutBgSvg";
 
 import tomatoDiseaseClassifier from "../../public/projects/tomato-health.jpg";
 import nextjsDashboard from "../../public/projects/nextjs-dashboard.png";
@@ -60,6 +61,7 @@ export default function Projects () {
           my github profile
         </a>
       </div>
+      <AboutBgSvg />
     </section>
   );
 };
@@ -104,7 +106,7 @@ const projects = [
     githubApi: "",
   },
   {
-    title: "Nakuja",
+    title: "Nakuja Basestation",
     type: "Frontend",
     image: (
       <Image
