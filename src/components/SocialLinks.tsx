@@ -99,8 +99,8 @@ const socialLinks = [
 
 const navLinks = [
   {
-    url: "#welcome",
-    text: "Welcome",
+    url: "#home",
+    text: "home",
   },
   // {
   //   url: "#who am i?",

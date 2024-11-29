@@ -59,14 +59,14 @@ export default function Hero() {
   const { onSectionChange } = useSection();
 
   useEffect(() => {
-     heroSection && onSectionChange!("welcome");
+     heroSection && onSectionChange!("home");
 
   }, [heroSection, onSectionChange]);
 
     return (
     <section
       ref={sectionRef}
-      id="welcome"
+      id="home"
       className="relative mt-16 sm:mt-8 pt-8 lg:pt-0 px-4 sm:px-8 md:px-20 max-w-5xl sm:pb-24 min-h-[800px] mx-auto sm:flex sm:flex-col sm:justify-center sm:items-center lg:flex-row-reverse"
     >
       <span
