@@ -62,7 +62,7 @@ const socialLinks = [
   {
     id: 1,
     title: "Brian's Github Profile",
-    link: "https://github.com/mikwaDev",
+    link: "https://github.com/brian-io",
     svg: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -81,7 +81,7 @@ const socialLinks = [
   {
     id: 2,
     title: "Brian's LinkedIn Profile",
-    link: "https://www.linkedin.com/in/brianmikwa/",
+    link: "https://www.linkedin.com/in/brianmikwa",
     svg: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -100,12 +100,12 @@ const socialLinks = [
 const navLinks = [
   {
     url: "#welcome",
-    text: "",
+    text: "Welcome",
   },
-  {
-    url: "#who am i?",
-    text: "Who am i?",
-  },
+  // {
+  //   url: "#who am i?",
+  //   text: "Who am i?",
+  // },
   {
     url: "#projects",
     text: "Projects",

@@ -106,7 +106,7 @@ export default function About() {
   return (
     <div
       ref={sectionRef}
-      className="about-panel bg-white dark:bg-[#1B2731] relative"
+      className="bg-white dark:bg-[#1B2731] relative"
     >
       <section id="whoami" className="section">
         <RoughNotationGroup>
@@ -143,7 +143,7 @@ export default function About() {
                     width={1700}
                     height={1790}
                     priority
-                    alt="Brian Mikwa profile picture"
+                    alt="Brian Mikwa's profile picture"
                     className="rounded-md"
                   />
                 </div>
@@ -205,7 +205,7 @@ const educationInfo = [
     subTitle: "Jomo Kenyatta University of Agriculture and Technology | 2019 ~ 2024",
     list: [
       "Strong foundation in electrical and electronics principles (circuits, components, control systems)",
-      "Hands-on project experience applying knowledge to design and build solutions (e.g., robots, circuits)",
+      "Hands-on project experience applying knowledge to design and build solutions (e.g., PCBs, circuits)",
       "Developed problem-solving and analytical skills through coursework and projects"
     ],
   },

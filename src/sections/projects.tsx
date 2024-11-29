@@ -31,9 +31,9 @@ export default function Projects () {
   }, [onSectionChange, projectSection]);
 
   return (
-    <section ref={sectionRef} id="projects" className="section">
+    <section ref={sectionRef} id="projects" className="section relative bg-white dark:bg-[#1B2731]">
       <div className="project-title text-center">
-        <RoughNotation
+        <RoughNotation 
           type="underline"
           color={`${theme === "light" ? "rgb(0, 122, 122)" : "rgb(5 206 145)"}`}
           strokeWidth={2}
@@ -44,8 +44,7 @@ export default function Projects () {
         </RoughNotation>
       </div>
       <span className="project-desc text-center block mb-4" ref={elementRef}>
-        “Talk is cheap. Show me the code”? I got you. <br />
-        Here are some of my projects you shouldn&apos;t misss
+        Here are some of my projects:
       </span>
       <div className="flex flex-wrap">
         {projects.map((project, index) => (
@@ -55,7 +54,7 @@ export default function Projects () {
       <div className="others text-center mb-16">
         Other projects can be explored in{" "}
         <a
-          href="https://github.com/mikwaDev"
+          href="https://github.com/brian-io"
           className="font-medium underline link-outline text-marrsgreen dark:text-carrigreen whitespace-nowrap"
         >
           my github profile
@@ -67,27 +66,27 @@ export default function Projects () {
 
 const projects = [
   {
-    title: "NextJs Dashboard",
+    title: "Custom Dashboard",
     type: "Frontend",
     image: (
       <Image
         src={nextjsDashboard}
         sizes="100vw"
         fill
-        alt="AstroPaper"
+        alt="Custom Dashboard"
         className="transition-transform duration-500 hover:scale-110 object-cover"
       />
     ),
-    desc: "A minimal, accessible and SEO-friendly app. Uses the new Next.js App Router. This includes support for enhanced layouts, colocation of components, tests, and styles, component-level data fetching, and more.",
+    desc: "A minimal, accessible and SEO-friendly app.",
     tags: ["NextJs", "TypeScript", "App Router", "TailwindCSS"],
     liveUrl: "https://nextjs-dashboard-bmm.vercel.dev/",
-    codeUrl: "https://github.com/mikwaDev/nextjs-dashboard",
+    codeUrl: "https://github.com/brian-io/nextjs-dashboard",
     bgColor: "bg-[#9FD0E3]",
-    githubApi: "https://api.github.com/repos/mikwaDev/nextjs-dashboard",
+    githubApi: "https://api.github.com/repos/brian-io/nextjs-dashboard",
   },
   {
-    title: "Tomato-Leaf Disease Classifier",
-    type: "Frontend + Backend",
+    title: "Tomato Leaf Disease Classifier",
+    type: "Frontend + Backend + ML",
     image: (
       <Image
         src={tomatoDiseaseClassifier}
@@ -97,10 +96,10 @@ const projects = [
         className="transition-transform duration-500 hover:scale-110 object-cover"
       />
     ),
-    desc: "Built with ReactJs and FastApi on the backend. Leverages Api calls to an ML classifier model hosted in an S3 bucket",
-    tags: ["React", "TypeScript", "Styled-Components"],
+    desc: "A simple web application that classifies tomato leaf images to their respective disease class. Built with React and FastApi on the backend. Leverages api calls to an ML classifier model hosted in an S3 bucket",
+    tags: ["React", "TypeScript", "FastApi"],
     liveUrl: "",
-    codeUrl: "",
+    codeUrl: "https://github.com/brian-io/n4-basestation",
     bgColor: "bg-[#B4BEE0]",
     githubApi: "",
   },
@@ -112,12 +111,12 @@ const projects = [
         src={nakuja}
         sizes="100vw"
         fill
-        alt="Haru Fashion App"
+        alt="Nakuja Basestation App"
         className="transition-transform duration-500 hover:scale-110 object-cover"
       />
     ),
-    desc: "An Telemetry web application where users can monitor various telemtry data from a Flight computer, built with ReactJs + MQTT and Websocket protocols.",
-    tags: ["ReactJs", "Javascript", "TailwindCSS"],
+    desc: "A web application where users can monitor various telemetry data from a Flight computer and remotely configure the flight computer through various commands.",
+    tags: ["ReactJs", "Docker", "ChartJs", "MQTT"],
     liveUrl: "#",
     codeUrl: "#",
     bgColor: "bg-[#A6CECE]",

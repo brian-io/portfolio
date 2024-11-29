@@ -71,7 +71,7 @@ export default function Hero() {
     >
       <span
         aria-hidden="true"
-        className="bg-text absolute -top-36 rotate-12 text-gray-100 dark:text-[#1f2e3a] text-9xl scale-150 tracking-wide font-bold select-none pointer-events-none text-center z-0"
+        className="bg-text absolute -top-36 rotate-12 text-gray-100 dark:text-[#1f2e3a] text-9xl scale-150 tracking-wide font-bold select-none pointer-events-none text-center -z-0"
       >
         PASSIONATE PROGRAMMER FREELANCER FULL-STACK DEVELOPER
       </span>

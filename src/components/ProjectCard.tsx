@@ -87,7 +87,7 @@ export default function ProjectCard ({ index, project } : Props){
                 title={`Check stargazers of '${project.title}' on Github`}
                 className="flex items-center group"
               >
-                12
+                0
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="scale-75 group-hover:-rotate-12"
