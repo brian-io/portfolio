@@ -13,7 +13,7 @@ import AboutBgSvg from "@/components/AboutBgSvg";
 
 import tomatoDiseaseClassifier from "../../public/projects/tomato-health.jpg";
 import obscuriumIo from "../../public/projects/obscuriumIo.png";
-import nakuja from "../../public/projects/nakuja.jpg";
+import nakuja from "../../public/projects/basestation.png";
 
 
 export default function Projects () {
@@ -68,7 +68,7 @@ export default function Projects () {
 
 const projects = [
   {
-    title: "Custom Dashboard",
+    title: "ObscuriumIO",
     type: "Frontend",
     image: (
       <Image
