@@ -113,8 +113,8 @@ export default function Hero() {
             exceptional results.
           </p>
           <p>
-            With my expertise in React and NextJS on the frontend, and Python,
-            NodeJS, and Express on the backend, I bring a unique
+            With my expertise in React and NextJS on the frontend, and Python Django, FastAPI,
+            PHP, Laravel, NodeJS and Express on the backend, I bring a unique
             combination of technical skills and creative problem-solving to
             every project I work on.
           </p>
