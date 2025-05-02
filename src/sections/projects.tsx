@@ -12,7 +12,7 @@ import useScrollActive from "@/hooks/useScrollActive";
 import AboutBgSvg from "@/components/AboutBgSvg";
 
 import tomatoDiseaseClassifier from "../../public/projects/tomato-health.jpg";
-import nextjsDashboard from "../../public/projects/nextjs-dashboard.png";
+import obscuriumIo from "../../public/projects/obscuriumIo.png";
 import nakuja from "../../public/projects/nakuja.jpg";
 
 
@@ -32,7 +32,7 @@ export default function Projects () {
   }, [onSectionChange, projectSection]);
 
   return (
-    <section ref={sectionRef} id="projects" className="section relative bg-white dark:bg-[#1B2731]">
+    <section ref={sectionRef} id="projects" className="section relative bg-white min-h-[800px] lg:min-h[700px] dark:bg-[#1B2731] ">
       <div className="project-title text-center">
         <RoughNotation 
           type="underline"
@@ -72,19 +72,19 @@ const projects = [
     type: "Frontend",
     image: (
       <Image
-        src={nextjsDashboard}
+        src={obscuriumIo}
         sizes="100vw"
         fill
-        alt="Custom Dashboard"
+        alt="Logistics Website"
         className="transition-transform duration-500 hover:scale-110 object-cover"
       />
     ),
-    desc: "A minimal, accessible and SEO-friendly app.",
+    desc: "Obscurium is a responsive, single-page web application built with modern frontend technologies. It features a clean, component-based architecture likely implemented with React (Next.js), Tailwind CSS for utility-first styling, and smooth UI interactions tailored for performance and scalability. The design emphasizes clear CTAs, responsive layout grids, and layered visuals using gradients, SVGs, and background patterns — ideal for showcasing a SaaS or B2B platform.",
     tags: ["NextJs", "TypeScript", "App Router", "TailwindCSS"],
-    liveUrl: "https://nextjs-dashboard-bmm.vercel.dev/",
-    codeUrl: "https://github.com/brian-io/nextjs-dashboard",
+    liveUrl: "https://obscuriumio.vercel.dev/",
+    codeUrl: "https://github.com/brian-io/obscurium",
     bgColor: "bg-[#9FD0E3]",
-    githubApi: "https://api.github.com/repos/brian-io/nextjs-dashboard",
+    githubApi: "https://api.github.com/repos/brian-io/obscuriumio",
   },
   {
     title: "Tomato Leaf Disease Classifier",
@@ -100,10 +100,10 @@ const projects = [
     ),
     desc: "A simple web application that classifies tomato leaf images to their respective disease class. Built with React and FastApi on the backend. Leverages api calls to an ML classifier model hosted in an S3 bucket",
     tags: ["React", "TypeScript", "FastApi"],
-    liveUrl: "",
-    codeUrl: "https://github.com/brian-io/n4-basestation",
+    liveUrl: "#",
+    codeUrl: "https://github.com/brian-io/tomato-leaf-classifier",
     bgColor: "bg-[#B4BEE0]",
-    githubApi: "",
+    githubApi: "#",
   },
   {
     title: "Nakuja Basestation",
@@ -120,7 +120,7 @@ const projects = [
     desc: "A web application where users can monitor various telemetry data from a Flight computer and remotely configure the flight computer through various commands.",
     tags: ["ReactJs", "Docker", "ChartJs", "MQTT"],
     liveUrl: "#",
-    codeUrl: "#",
+    codeUrl: "https://github.com/brian-io/n4-basestation",
     bgColor: "bg-[#A6CECE]",
     githubApi: "#",
   },
